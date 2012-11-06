@@ -1,0 +1,37 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Name:</b>
+  <%= @employer.name %>
+</p>
+
+<p>
+  <b>Email:</b>
+  <%= @employer.email %>
+</p>
+
+<p>
+  <b>Phone:</b>
+  <%= @employer.phone %>
+</p>
+
+<p>
+  <b>Website:</b>
+  <%= @employer.website %>
+</p>
+
+<p>
+  <b>City:</b>
+  <%= @employer.city %>
+</p>
+
+<p>
+  <b>Job:</b>
+  <%= @employer.jobs.each do |job_index| %>
+  <%= job_index.headline %>
+  <% end %>
+</p>
+
+
+<%= link_to 'Edit', edit_employer_path(@employer) %> |
+<%= link_to 'Back', employers_path %>
