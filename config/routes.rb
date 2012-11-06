@@ -1,4 +1,17 @@
 Thepitch::Application.routes.draw do
+  # resources :attachments
+  get "/attachments/:id/new", :controller => "Attachments", :action => "new", :as => "new_attachment"
+  
+  post "/attachments", :controller => "Attachments", :action => "create"
+  
+  delete "/attachments/:id", :controller => "Attachments", :action => "destroy"
+
+  resources :pitches
+
+  resources :users
+
+  resources :userfirst_names
+
   resources :jobs
 
   resources :employers

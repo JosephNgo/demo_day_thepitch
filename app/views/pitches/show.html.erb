@@ -1,0 +1,39 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>User:</b>
+  <%= link_to @pitch.user.full_name, user_url(@pitch.user_id)%>
+</p>
+
+<p>
+  <b>Job:</b>
+  <%= @pitch.job_id %>
+</p>
+
+<p>
+  <b>Pitch ID:</b>
+  <%= @pitch.id%>
+</p>
+
+<p>
+  <b>Headline:</b>
+  <%= @pitch.headline %>
+</p>
+
+<p>
+  <b>Uploaded Attachments:</b>
+    <ul>
+    <% Attachment.where(:pitch_id => @pitch.id).each do |item| %>
+     <li> <%= item.upload_url %> | <%=link_to "Destroy", attachment_path(item.id), :method => 'Delete' %> 
+     </li>
+     
+     <%end%>
+  <br><%= link_to "Add Attachment", new_attachment_path(@pitch.id) %>
+</p>
+
+
+<br>
+
+
+<%= link_to 'Edit', edit_pitch_path(@pitch) %> |
+<%= link_to 'Back', pitches_path %>

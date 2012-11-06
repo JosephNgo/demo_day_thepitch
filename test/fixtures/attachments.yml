@@ -1,0 +1,11 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  job_id: 1
+  pitch_id: 1
+  upload_url: MyString
+
+two:
+  job_id: 1
+  pitch_id: 1
+  upload_url: MyString
