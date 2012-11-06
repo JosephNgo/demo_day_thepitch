@@ -7,9 +7,12 @@
   <%= csrf_meta_tags %>
 </head>
 <body>
-
+<nav>
 <%= link_to "Users", users_url%> |
 <%= link_to "Pitches", pitches_url%> |
+<%= link_to "Employer Home", employers_url %> |
+<%= link_to "Job Home", jobs_url %> |
+</nav>
 <%= yield %>
 
 </body>

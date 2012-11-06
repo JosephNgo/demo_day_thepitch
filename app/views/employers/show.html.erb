@@ -27,9 +27,11 @@
 
 <p>
   <b>Job:</b>
-  <%= @employer.jobs.each do |job_index| %>
-  <%= job_index.headline %>
+  <ul>
+  <% @employer.jobs.each do |job_index| %>
+    <li><%= link_to "#{job_index.headline}", job_url(job_index.id) %></li>
   <% end %>
+</ul>
 </p>
 
 
