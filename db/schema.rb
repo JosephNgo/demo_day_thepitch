@@ -44,7 +44,7 @@ ActiveRecord::Schema.define(:version => 20121106203659) do
   create_table "pitches", :force => true do |t|
     t.integer  "user_id"
     t.integer  "job_id"
-    t.string   "headline"
+    t.string   "headlineUs"
     t.datetime "created_at", :null => false
     t.datetime "updated_at", :null => false
   end
